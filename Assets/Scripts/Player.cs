@@ -2,38 +2,41 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour
 {
     #region Variables
 
-    
-    private int m_playersLifes = 3;
+    private int m_PlayersLifes = 3;
     [SerializeField] public int Score = 0;
-    [SerializeField] public int PlayersLife
+
+    [SerializeField]
+    public int PlayersLife
     {
-        get { return m_playersLifes; }
+        get { return m_PlayersLifes; }
         set
         {
             if (PlayersLife <= 0)
             {
-                m_playersLifes = 0;
+                m_PlayersLifes = 0;
             }
             else
             {
-                m_playersLifes = value;
+                m_PlayersLifes = value;
             }
         }
-
     }
 
-    [Header("Input Method")]
-    [SerializeField] private string m_HorizontalAxis = "Horizontal";
+    [Header("Input Method")] [SerializeField]
+    private string m_HorizontalAxis = "Horizontal";
+
     [SerializeField] private string m_VerticalAxis = "Vertical";
     [SerializeField] private string m_Fire1 = "Fire 1";
-    [Header("Variables")]
-    [Range(0, 5)]
-    [SerializeField] private float m_Speed = 3.5f;
+
+    [Header("Variables")] [Range(0, 5)] [SerializeField]
+    private float m_Speed = 3.5f;
+
     [SerializeField] private float m_SpeedMultiplier = 3f;
     [SerializeField] private float x_Limit = 11.36f;
     [SerializeField] private GameObject m_LaserPrefab;
@@ -46,18 +49,21 @@ public class Player : MonoBehaviour
     private SpawnManager m_spawnManager { get; set; }
     [SerializeField] UI_Manager m_UIManager;
     [SerializeField] DisplayLives m_DisplayLives;
+    [SerializeField] private GameObject[] m_EnginesPrefab;
+    [SerializeField] private GameObject m_Thruster;
 
-    private  bool m_IsTripleShotActive = false;
+    private bool m_IsTripleShotActive = false;
     private bool m_IsSpeedActive = false;
     private bool m_IsShieldActive = false;
 
     #endregion Variables
+
     void Start()
     {
         PlayersLife = 3;
         CheckForUI();
-        CheckForSpawnManager(); 
-        SetStartPoint();       
+        CheckForSpawnManager();
+        SetStartPoint();
     }
 
     private void CheckForSpawnManager()
@@ -71,7 +77,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         m_time = Time.time;
-        CalculateMovement(); 
+        CalculateMovement();
         if (Input.GetButton(m_Fire1) && Time.time > m_CanFire)
         {
             InstantiateLaser();
@@ -80,56 +86,61 @@ public class Player : MonoBehaviour
 
 
     #region Methods
+
     private void SetStartPoint()
     {
         transform.position = new Vector3(0, 0, 0);
     }
+
     private void CalculateMovement()
     {
         float x_value = Input.GetAxis(m_HorizontalAxis);
         float y_value = Input.GetAxis(m_VerticalAxis);
         Vector3 direction = new Vector3(x_value, y_value, 0);
 
-        transform.Translate(direction * m_Speed * Time.deltaTime);
+        transform.Translate(direction * (m_Speed * Time.deltaTime));
         HorizontalWrapping();
         VerticalRestrain();
     }
+
     private void HorizontalWrapping()
     {
         if (transform.position.x > x_Limit)
         {
             transform.position = new Vector3(-x_Limit, transform.position.y, transform.position.z);
-
         }
         else if (transform.position.x < -x_Limit)
         {
             transform.position = new Vector3(x_Limit, transform.position.y, transform.position.z);
         }
     }
+
     private void VerticalRestrain()
     {
         transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -5f, 5f), 0);
     }
+
     private void InstantiateLaser()
-    {  
+    {
         m_CanFire = Time.time + m_FireRate;
 
-        if(m_IsTripleShotActive == true)
+        if (m_IsTripleShotActive == true)
         {
-            GameObject tripleShot = Instantiate(m_TripleShotPrefab, transform.position + m_LaserOffset, Quaternion.identity);
+            GameObject tripleShot =
+                Instantiate(m_TripleShotPrefab, transform.position + m_LaserOffset, Quaternion.identity);
         }
         else
         {
             GameObject laser = Instantiate(m_LaserPrefab, transform.position + m_LaserOffset, Quaternion.identity);
         }
-        
     }
+
     public void Damage()
     {
-       if(!m_IsShieldActive)
+        if (!m_IsShieldActive)
         {
             PlayersLife--;
-            //ChangeColor();
+
             if (PlayersLife < 1)
             {
                 m_spawnManager.OnPlayerDeath();
@@ -142,13 +153,42 @@ public class Player : MonoBehaviour
             m_IsShieldActive = false;
             m_ShieldPrefab.SetActive(false);
         }
+
         m_UIManager.UpdateLives();
+        SetEngineOnFire();
     }
+
+    void SetEngineOnFire()
+    {
+        switch (PlayersLife)
+        {
+            case 2:
+                m_EnginesPrefab[Random.Range(0,2)].SetActive(true);
+                break;
+            case 1:
+                if (m_EnginesPrefab[0].activeInHierarchy)
+                {
+                    m_EnginesPrefab[1].SetActive(true);
+                }
+                else
+                {
+                    m_EnginesPrefab[0].SetActive(true);
+                }
+                
+                break;
+            default:
+                return;
+        }
+
+        StartCoroutine(ThrusterBlink());
+    }
+
     public void AddScore(int points)
     {
         Score += points;
         m_UIManager.UpdateScore();
     }
+
     void CheckForUI()
     {
         if (m_UIManager == null)
@@ -156,18 +196,21 @@ public class Player : MonoBehaviour
             m_UIManager = GameObject.Find("UI").GetComponent<UI_Manager>();
         }
     }
+
     #endregion Methods
 
     #region Powerups
+
     public void ActivateTripleShot()
     {
-        if(!m_IsTripleShotActive)
-        StartCoroutine(PowerUpsCoolDown(CollectablePowerUps.TripleShot));
+        if (!m_IsTripleShotActive)
+            StartCoroutine(PowerUpsCoolDown(CollectablePowerUps.TripleShot));
     }
+
     public void ActivateSpeed()
     {
-        if (!m_IsSpeedActive) 
-        StartCoroutine(PowerUpsCoolDown(CollectablePowerUps.Speed));
+        if (!m_IsSpeedActive)
+            StartCoroutine(PowerUpsCoolDown(CollectablePowerUps.Speed));
     }
 
     public void ActivateShield()
@@ -175,34 +218,58 @@ public class Player : MonoBehaviour
         if (!m_IsShieldActive)
             StartCoroutine(PowerUpsCoolDown(CollectablePowerUps.Shield));
     }
+
     #endregion Powerups
 
     #region Coroutines
-    IEnumerator PowerUpsCoolDown(CollectablePowerUps collectablePowerUps)
+
+    private IEnumerator PowerUpsCoolDown(CollectablePowerUps collectablePowerUps)
     {
-        if(collectablePowerUps == CollectablePowerUps.TripleShot)
+        switch (collectablePowerUps)
         {
-            m_IsTripleShotActive = true;
-            yield return new WaitForSeconds(5.0f);
-            m_IsTripleShotActive = false;
-        }else if (collectablePowerUps == CollectablePowerUps.Speed)
-        {
-            m_Speed *= m_SpeedMultiplier;
-            m_IsSpeedActive = true;
-            yield return new WaitForSeconds(7.0f);
-            m_Speed /= m_SpeedMultiplier;
-            m_IsSpeedActive = false;
+            case CollectablePowerUps.TripleShot:
+                m_IsTripleShotActive = true;
+                yield return new WaitForSeconds(5.0f);
+                m_IsTripleShotActive = false;
+                break;
+            case CollectablePowerUps.Speed:
+                m_Speed *= m_SpeedMultiplier;
+                m_IsSpeedActive = true;
+                yield return new WaitForSeconds(7.0f);
+                m_Speed /= m_SpeedMultiplier;
+                m_IsSpeedActive = false;
+                break;
+            case CollectablePowerUps.Shield:
+                m_IsShieldActive = true;
+                m_ShieldPrefab.SetActive(true);
+                yield return new WaitForSeconds(10.0f);
+                m_ShieldPrefab.SetActive(false);
+                m_IsShieldActive = false;
+                break;
         }
-        else if (collectablePowerUps == CollectablePowerUps.Shield)
-        {         
-            m_IsShieldActive = true;
-            m_ShieldPrefab.SetActive(true);
-            yield return new WaitForSeconds(10.0f);
-            m_ShieldPrefab.SetActive(false);
-            m_IsShieldActive = false;
+    }
+
+    private IEnumerator ThrusterBlink()
+    {
+        while (PlayersLife <= 2)
+        {
+            switch (PlayersLife)
+            {
+                case 2:
+                    yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+                    m_Thruster.SetActive(false);
+                    yield return new WaitForSeconds(Random.Range(0.1f, 0.2f));
+                    m_Thruster.SetActive(true);
+                    break;
+                case 1:
+                    yield return new WaitForSeconds(Random.Range(0.1f, 0.6f));
+                    m_Thruster.SetActive(false);
+                    yield return new WaitForSeconds(Random.Range(0.1f, 0.6f));
+                    m_Thruster.SetActive(true);
+                    break;
+            }
         }
     }
 
     #endregion coroutines
-  
 }

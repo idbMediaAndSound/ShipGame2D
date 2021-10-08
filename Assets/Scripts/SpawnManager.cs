@@ -12,9 +12,13 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         m_WaitTime = Random.Range(8f, 20f);
+        
+    }
+
+    public void StartSpawning()
+    {
         StartCoroutine(SpawnEnemyRoutine());
         StartCoroutine(SpawnPowerUpRoutine());
-        //InvokeRepeating("SpawnTripleShot", m_WaitTime, m_WaitTime);
     }
 
     
@@ -31,6 +35,7 @@ public class SpawnManager : MonoBehaviour
     }
     IEnumerator SpawnEnemyRoutine()
     {
+        yield return new WaitForSeconds(3);
         while (m_StopSpawning == false)
         {
             SpawnItem(m_EnemyPrefab);
@@ -40,6 +45,7 @@ public class SpawnManager : MonoBehaviour
     }
     IEnumerator SpawnPowerUpRoutine()
     {
+        yield return new WaitForSeconds(3);
         while (m_StopSpawning == false)
         {
             SpawnItem(m_PowerUpPrefabs[Random.Range(0, m_PowerUpPrefabs.Count)]);

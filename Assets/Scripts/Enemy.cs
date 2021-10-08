@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.down * m_Speed * Time.deltaTime);
+        transform.Translate(Vector3.down * (m_Speed * Time.deltaTime));
         Respawn();
     }
 

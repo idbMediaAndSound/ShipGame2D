@@ -8,6 +8,7 @@ using System.Threading.Tasks;
     public enum TypeOfEnemy
     {
         regular,
-        boss
+        boss,
+        asteroid
     }
 
