@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{19F5993D-4CE8-431F-8C72-798156D53C31}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="SpaceShip" ID="{19F5993D-4CE8-431F-8C72-798156D53C31}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Explossion" ID="{7A5F156C-E963-464D-AD3A-B7529AC8BE4A}" ShortID="617382170">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{497E6990-D814-447A-B99D-FB020C52C5FF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6901679F-363C-4901-8626-4279CDB19704}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="explosion_sound" ID="{45DA6B67-F992-455F-AFEE-1504F89CCFE6}">
+							<Language>SFX</Language>
+							<AudioFile>explosion_sound.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="377672464"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="explosion_sound" ID="{45DA6B67-F992-455F-AFEE-1504F89CCFE6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Laser" ID="{48446939-B5C0-4A6F-92CB-4A9528ACFA56}" ShortID="146329131">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{497E6990-D814-447A-B99D-FB020C52C5FF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6901679F-363C-4901-8626-4279CDB19704}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="laser_shot" ID="{4D5C865A-C29A-426C-AAA5-6DAE9D84CEE9}">
+							<Language>SFX</Language>
+							<AudioFile>laser_shot.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="985237385"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="laser_shot" ID="{4D5C865A-C29A-426C-AAA5-6DAE9D84CEE9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="PowerUp" ID="{E9A07D75-747D-4584-B37D-2BC65B2D788C}" ShortID="394578747">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{497E6990-D814-447A-B99D-FB020C52C5FF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6901679F-363C-4901-8626-4279CDB19704}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="power_up_sound" ID="{57472DB9-30E6-44C7-BA42-E6A9C2FF3390}">
+							<Language>SFX</Language>
+							<AudioFile>power_up_sound.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="841046023"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="power_up_sound" ID="{57472DB9-30E6-44C7-BA42-E6A9C2FF3390}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

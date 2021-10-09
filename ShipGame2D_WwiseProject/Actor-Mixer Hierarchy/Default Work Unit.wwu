@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F6771D62-A5E1-4D04-BC94-F8047F055E04}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{F6771D62-A5E1-4D04-BC94-F8047F055E04}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F6771D62-A5E1-4D04-BC94-F8047F055E04}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Inclusion" Type="bool">
+					<ValueList>
+						<Value>False</Value>
+					</ValueList>
+				</Property>
+			</PropertyList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
