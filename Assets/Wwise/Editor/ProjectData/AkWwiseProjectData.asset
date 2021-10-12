@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: b18b38ac244a4a40b5c1a230fb042fe8
     GuidInternal: 
-    m_lastTime: -8585678553714775808
-    List: []
+    m_lastTime: -8585675925624775808
+    List:
+    - name: MusicSoundBank
+      guid: 280f1558ded9dd4faf1dafe51c201185
+      id: 3427827313
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b18b38ac244a4a40b5c1a230fb042fe8
+      - ElementName: MusicSoundBank
+        ObjectType: 7
+        guid: 280f1558ded9dd4faf1dafe51c201185
+      Path: SoundBanks/Default Work Unit/MusicSoundBank
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
@@ -82,6 +96,117 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585678553714775808
     List: []
+  - PhysicalPath: Events/MainCharacter.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainCharacter
+      ObjectType: 12
+      guid: 946faebe1a1983439d675034e00964a5
+    ParentPath: Events/MainCharacter
+    guid: 946faebe1a1983439d675034e00964a5
+    GuidInternal: 
+    m_lastTime: -8585675914844775808
+    List:
+    - name: Explossion
+      guid: 3e42097f4c23704a8c827d4e3f77bcc7
+      id: 1839873747
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainCharacter
+        ObjectType: 12
+        guid: 946faebe1a1983439d675034e00964a5
+      - ElementName: Explossion
+        ObjectType: 3
+        guid: 3e42097f4c23704a8c827d4e3f77bcc7
+      Path: Events/MainCharacter/Explossion
+      maxAttenuation: 0
+      maxDuration: 3.018396
+      minDuration: 3.018396
+    - name: LaserFire
+      guid: ac5b1ba7d901d446a3677e4524ed52ae
+      id: 315496058
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainCharacter
+        ObjectType: 12
+        guid: 946faebe1a1983439d675034e00964a5
+      - ElementName: LaserFire
+        ObjectType: 3
+        guid: ac5b1ba7d901d446a3677e4524ed52ae
+      Path: Events/MainCharacter/LaserFire
+      maxAttenuation: 0
+      maxDuration: 0.755462
+      minDuration: 0.635265
+    - name: Powerup
+      guid: e7a4c1e168548a469a9af84a25a726bd
+      id: 3950429679
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainCharacter
+        ObjectType: 12
+        guid: 946faebe1a1983439d675034e00964a5
+      - ElementName: Powerup
+        ObjectType: 3
+        guid: e7a4c1e168548a469a9af84a25a726bd
+      Path: Events/MainCharacter/Powerup
+      maxAttenuation: 0
+      maxDuration: 0.8
+      minDuration: 0.8
+    - name: TripleShotFire
+      guid: aae13bee8c3bca429c6eab3504d801a9
+      id: 863752677
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainCharacter
+        ObjectType: 12
+        guid: 946faebe1a1983439d675034e00964a5
+      - ElementName: TripleShotFire
+        ObjectType: 3
+        guid: aae13bee8c3bca429c6eab3504d801a9
+      Path: Events/MainCharacter/TripleShotFire
+      maxAttenuation: 0
+      maxDuration: 0.955462
+      minDuration: 0.835265
+  - PhysicalPath: Events/MusicManager.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MusicManager
+      ObjectType: 12
+      guid: 99153f71dd2af24a930c8ea171215702
+    ParentPath: Events/MusicManager
+    guid: 99153f71dd2af24a930c8ea171215702
+    GuidInternal: 
+    m_lastTime: -8585675925624775808
+    List:
+    - name: PlayMusic
+      guid: 256f9ee75c97e24c8b8698af6e4150b8
+      id: 417627684
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MusicManager
+        ObjectType: 12
+        guid: 99153f71dd2af24a930c8ea171215702
+      - ElementName: PlayMusic
+        ObjectType: 3
+        guid: 256f9ee75c97e24c8b8698af6e4150b8
+      Path: Events/MusicManager/PlayMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
@@ -139,7 +264,7 @@ MonoBehaviour:
     m_lastTime: -8585678553714775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0100000005000000070000000b0000001000000011000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BEAE6F94-191A-4383-9D67-5034E00964A5}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="MainCharacter" ID="{BEAE6F94-191A-4383-9D67-5034E00964A5}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="LaserFire" ID="{A71B5BAC-01D9-46D4-A367-7E4524ED52AE}">
+					<ChildrenList>
+						<Action Name="" ID="{0E1AB009-49D4-4553-9686-364F5B2782FF}" ShortID="469524756">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Laser" ID="{48446939-B5C0-4A6F-92CB-4A9528ACFA56}" WorkUnitID="{19F5993D-4CE8-431F-8C72-798156D53C31}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TripleShotFire" ID="{EE3BE1AA-3B8C-42CA-9C6E-AB3504D801A9}">
+					<ChildrenList>
+						<Action Name="" ID="{3EDCD74A-4F0B-408C-8D5B-3AC37A383992}" ShortID="819711598">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TripleShot" ID="{74007EE4-5B7F-4B7D-8AA2-373FC21D4038}" WorkUnitID="{19F5993D-4CE8-431F-8C72-798156D53C31}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Explossion" ID="{7F09423E-234C-4A70-8C82-7D4E3F77BCC7}">
+					<ChildrenList>
+						<Action Name="" ID="{49888375-0F2E-45B8-9BA1-6105AC8860A2}" ShortID="957949678">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Explossion" ID="{7A5F156C-E963-464D-AD3A-B7529AC8BE4A}" WorkUnitID="{19F5993D-4CE8-431F-8C72-798156D53C31}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Powerup" ID="{E1C1A4E7-5468-468A-9A9A-F84A25A726BD}">
+					<ChildrenList>
+						<Action Name="" ID="{8766433D-EA79-49BB-9FBA-916D7A916F82}" ShortID="582892175">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PowerUp" ID="{E9A07D75-747D-4584-B37D-2BC65B2D788C}" WorkUnitID="{19F5993D-4CE8-431F-8C72-798156D53C31}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

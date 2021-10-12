@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	417627684	PlayMusic			\MusicManager\PlayMusic	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	899973686	music_background	Y:\Documents\GitHub\ShipGame2D\ShipGame2D_WwiseProject\.cache\Mac\SFX\music_background_E84716CF.wem		\Interactive Music Hierarchy\MainMenuMX\MusicPlaylist\music_background\music_background		207885
+

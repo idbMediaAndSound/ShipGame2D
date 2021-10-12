@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool m_IsGameOver;
     [SerializeField] GameObject m_SpawnManager;
 
+    private void Awake()
+    {
+        SoundbankManager.LoadSoundBank();
+    }
+
     private void Update()
     {
         if(m_IsGameOver && Input.GetKeyDown(KeyCode.R))

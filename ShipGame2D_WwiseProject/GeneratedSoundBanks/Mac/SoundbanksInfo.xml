@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>/Users/ivanbeltran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/ShipGame2D/ShipGame2D_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/ivanbeltran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/ShipGame2D/ShipGame2D_WwiseProject/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/ivanbeltran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/ShipGame2D/ShipGame2D_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/ivanbeltran/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/ShipGame2D/ShipGame2D_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="184776329" Language="SFX" Hash="972844599">
+			<ObjectPath>\SoundBanks\Default Work Unit\PlayModeSoundbank</ObjectPath>
+			<ShortName>PlayModeSoundbank</ShortName>
+			<Path>PlayModeSoundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1839873747" Name="Explossion" ObjectPath="\Events\MainCharacter\Explossion" DurationType="OneShot" DurationMin="3.018396" DurationMax="3.018396">
+					<IncludedMemoryFiles>
+						<File Id="377672464" Language="SFX">
+							<ShortName>explosion_sound.wav</ShortName>
+							<Path>SFX/explosion_sound_569C59C1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="315496058" Name="LaserFire" ObjectPath="\Events\MainCharacter\LaserFire" DurationType="OneShot" DurationMin="0.635265" DurationMax="0.755462">
+					<IncludedMemoryFiles>
+						<File Id="985237385" Language="SFX">
+							<ShortName>laser_shot.wav</ShortName>
+							<Path>SFX/laser_shot_569C59C1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3950429679" Name="Powerup" ObjectPath="\Events\MainCharacter\Powerup" DurationType="OneShot" DurationMin="0.800000" DurationMax="0.800000">
+					<IncludedMemoryFiles>
+						<File Id="841046023" Language="SFX">
+							<ShortName>power_up_sound.wav</ShortName>
+							<Path>SFX/power_up_sound_569C59C1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="863752677" Name="TripleShotFire" ObjectPath="\Events\MainCharacter\TripleShotFire" DurationType="OneShot" DurationMin="0.835265" DurationMax="0.955462">
+					<IncludedMemoryFiles>
+						<File Id="985237385" Language="SFX">
+							<ShortName>laser_shot.wav</ShortName>
+							<Path>SFX/laser_shot_569C59C1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3427827313" Language="SFX" Hash="3628438356">
+			<ObjectPath>\SoundBanks\Default Work Unit\MusicSoundBank</ObjectPath>
+			<ShortName>MusicSoundBank</ShortName>
+			<Path>MusicSoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="417627684" Name="PlayMusic" ObjectPath="\Events\MusicManager\PlayMusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="899973686" Language="SFX">
+							<ShortName>music_background.wav</ShortName>
+							<Path>SFX/music_background_E84716CF.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3938467746" Language="SFX" Hash="1196267215">
+			<ObjectPath>\SoundBanks\Default Work Unit\MainMenuSoundBank</ObjectPath>
+			<ShortName>MainMenuSoundBank</ShortName>
+			<Path>MainMenuSoundBank.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

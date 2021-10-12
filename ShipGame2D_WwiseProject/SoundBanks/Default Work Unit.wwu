@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AC388BB1-4A24-404A-B5C1-A230FB042FE8}" SchemaVersion="103">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{AC388BB1-4A24-404A-B5C1-A230FB042FE8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AC388BB1-4A24-404A-B5C1-A230FB042FE8}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="MusicSoundBank" ID="{58150F28-D9DE-4FDD-AF1D-AFE51C201185}">
+					<ObjectInclusionList>
+						<ObjectRef Name="MusicManager" ID="{713F1599-2ADD-4AF2-930C-8EA171215702}" WorkUnitID="{713F1599-2ADD-4AF2-930C-8EA171215702}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="PlayModeSoundbank" ID="{6A9F90F7-6B93-45B8-B380-F7EAAE32AB5A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="MainCharacter" ID="{BEAE6F94-191A-4383-9D67-5034E00964A5}" WorkUnitID="{BEAE6F94-191A-4383-9D67-5034E00964A5}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="MainMenuSoundBank" ID="{D44C7F9B-E65C-4BC4-B9FB-3455945DBF2E}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

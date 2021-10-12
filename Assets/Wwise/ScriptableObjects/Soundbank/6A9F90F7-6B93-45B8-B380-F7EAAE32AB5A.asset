@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63d708edde44d26a510dc2c80a6ddd, type: 3}
+  m_Name: 6A9F90F7-6B93-45B8-B380-F7EAAE32AB5A
+  m_EditorClassIdentifier: 
+  objectName: PlayModeSoundbank
+  id: 184776329
+  guid: 6A9F90F7-6B93-45B8-B380-F7EAAE32AB5A
