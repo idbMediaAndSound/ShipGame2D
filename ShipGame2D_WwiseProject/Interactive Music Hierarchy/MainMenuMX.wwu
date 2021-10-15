@@ -16,6 +16,34 @@
 						<MusicSegment Name="music_background" ID="{B62384D2-E9CA-4F8D-ADE5-4FA0524E2FD2}" ShortID="868779191">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="13241.3605442177"/>
+								<Property Name="PlaybackSpeed" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{DFBF9096-DDAA-4D40-B012-C280FF4BB221}" ShortID="63202869">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="MusicSpeed" ID="{41425376-1FDE-4091-BA49-08C47646DC12}" WorkUnitID="{B19759F9-2C2C-4EC1-B52D-BB79A8439A62}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{74096F57-1C75-4C18-9441-467334E7F1D6}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="1"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>1</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>2</XPos>
+														<YPos>1.47771</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="Tempo" Type="Real64" Value="145"/>
 							</PropertyList>
 							<ReferenceList>

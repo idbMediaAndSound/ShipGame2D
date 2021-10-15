@@ -20,6 +20,11 @@ namespace AK
         static const AkUniqueID TRIPLESHOTFIRE = 863752677U;
     } // namespace EVENTS
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MUSICSPEED = 1763041431U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;

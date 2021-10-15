@@ -4,24 +4,43 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SoundbankManager : MonoBehaviour
-{
-    [SerializeField] static List<GameObject> Soundbanks = new List<GameObject>();
+{ /*
+    [SerializeField] static GameObject MusicSoundbank;
+    [SerializeField] static GameObject MenuSoundbank;
+    [SerializeField] static GameObject GameplaySoundbank;
 
-    public Dictionary<GameObject, string> SoundbanksAvailable = new Dictionary<GameObject, string>();
 
+    private void Start()
+    {
+        CheckForReferences();
+    }
 
     public static void LoadSoundBank()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
-        /*switch(SceneManager.GetActiveScene().name)
+        if (!MusicSoundbank.activeInHierarchy)
         {
-            case "MainMenu":
-                Soundbanks[1].SetActive(true);
+            MusicSoundbank.SetActive(true);
+        }else
+        {
+            return;
+        }
+
+        switch(SceneManager.GetActiveScene().name.ToLower())
+        {
+            case "mainmenu":
+                Debug.Log("The scene 0 is: " + SceneManager.GetActiveScene().name.ToUpper());
                 break;
-            case "Level1":
-                Soundbanks[1].SetActive(false);
-                Soundbanks[2].SetActive(true);
+            case "level1":
+                Debug.Log("The scene 1 is: " + SceneManager.GetActiveScene().name.ToUpper());
                 break;
-        }*/
+        }
     }
+
+    public void CheckForReferences()
+    {
+        if(MusicSoundbank == null)
+        {
+            MusicSoundbank = GameObject.Find("Music");
+        }
+    }*/
 }

@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
         CalculateMovement();
         if (Input.GetButton(m_Fire1) && Time.time > m_CanFire)
         {
-            InstantiateLaser();
+            ShootLaser();
         }
     }
 
@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -5f, 5f), 0);
     }
 
-    private void InstantiateLaser()
+    private void ShootLaser()
     {
         m_CanFire = Time.time + m_FireRate;
 
@@ -128,10 +128,12 @@ public class Player : MonoBehaviour
         {
             GameObject tripleShot =
                 Instantiate(m_TripleShotPrefab, transform.position + m_LaserOffset, Quaternion.identity);
+            AkSoundEngine.PostEvent("TripleShotFire", gameObject);
         }
         else
         {
             GameObject laser = Instantiate(m_LaserPrefab, transform.position + m_LaserOffset, Quaternion.identity);
+            AkSoundEngine.PostEvent("LaserFire", gameObject);
         }
     }
 
@@ -235,9 +237,11 @@ public class Player : MonoBehaviour
             case CollectablePowerUps.Speed:
                 m_Speed *= m_SpeedMultiplier;
                 m_IsSpeedActive = true;
+                AkSoundEngine.SetRTPCValue("MusicSpeed", 1.5f);
                 yield return new WaitForSeconds(7.0f);
                 m_Speed /= m_SpeedMultiplier;
                 m_IsSpeedActive = false;
+                AkSoundEngine.SetRTPCValue("MusicSpeed", 1f);
                 break;
             case CollectablePowerUps.Shield:
                 m_IsShieldActive = true;

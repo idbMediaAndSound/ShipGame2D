@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: b18b38ac244a4a40b5c1a230fb042fe8
     GuidInternal: 
-    m_lastTime: -8585675925624775808
+    m_lastTime: -8585675892654775808
     List:
+    - name: MainMenuSoundBank
+      guid: 9b7f4cd45ce6c44bb9fb3455945dbf2e
+      id: 3938467746
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b18b38ac244a4a40b5c1a230fb042fe8
+      - ElementName: MainMenuSoundBank
+        ObjectType: 7
+        guid: 9b7f4cd45ce6c44bb9fb3455945dbf2e
+      Path: SoundBanks/Default Work Unit/MainMenuSoundBank
     - name: MusicSoundBank
       guid: 280f1558ded9dd4faf1dafe51c201185
       id: 3427827313
@@ -82,6 +96,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 280f1558ded9dd4faf1dafe51c201185
       Path: SoundBanks/Default Work Unit/MusicSoundBank
+    - name: PlayModeSoundbank
+      guid: f7909f6a936bb845b380f7eaae32ab5a
+      id: 184776329
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b18b38ac244a4a40b5c1a230fb042fe8
+      - ElementName: PlayModeSoundbank
+        ObjectType: 7
+        guid: f7909f6a936bb845b380f7eaae32ab5a
+      Path: SoundBanks/Default Work Unit/PlayModeSoundbank
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
@@ -188,7 +216,7 @@ MonoBehaviour:
     ParentPath: Events/MusicManager
     guid: 99153f71dd2af24a930c8ea171215702
     GuidInternal: 
-    m_lastTime: -8585675925624775808
+    m_lastTime: -8585675113174775808
     List:
     - name: PlayMusic
       guid: 256f9ee75c97e24c8b8698af6e4150b8
@@ -219,8 +247,22 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: f95997b12c2cc14eb52dbb79a8439a62
     GuidInternal: 
-    m_lastTime: -8585678553714775808
-    List: []
+    m_lastTime: -8585673350784775808
+    List:
+    - name: MusicSpeed
+      guid: 76534241de1f9140ba4908c47646dc12
+      id: 1763041431
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f95997b12c2cc14eb52dbb79a8439a62
+      - ElementName: MusicSpeed
+        ObjectType: 13
+        guid: 76534241de1f9140ba4908c47646dc12
+      Path: Game Parameters/Default Work Unit/MusicSpeed
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
     PathAndIcons:
@@ -264,7 +306,7 @@ MonoBehaviour:
     m_lastTime: -8585678553714775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000005000000070000000b0000001000000011000000
+  ExpandedWaapiItemIds: 0100000005000000070000000b0000000c0000001000000011000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B19759F9-2C2C-4EC1-B52D-BB79A8439A62}" SchemaVersion="103">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{B19759F9-2C2C-4EC1-B52D-BB79A8439A62}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B19759F9-2C2C-4EC1-B52D-BB79A8439A62}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="MusicSpeed" ID="{41425376-1FDE-4091-BA49-08C47646DC12}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="2"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

@@ -27,7 +27,7 @@
 				<Property Name="General\LatestPlatform" Type="string" Value="Mac"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value=""/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value=""/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="KA8VWN7Z3U+vHa/lHCARhfeQn2qTa7hFs4D36q4yq1qbf0zUXObES7n7NFWUXb8u"/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="m39M1FzmxEu5+zRVlF2/LigPFVje2d1Prx2v5RwgEYX3kJ9qk2u4RbOA9+quMqta"/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="MolgMYBMsk2+HhOZ5s06swEDZQD/////IWrC7mgPokOn5RgXJchgpgEDZQD/////"/>
 				<Property Name="Interactive Music\x64_{0002210F-0D05-4E61-87B8-70F7DE9B2FF7} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAkFxAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
@@ -75,8 +75,9 @@
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value="+VmXsSwswU61Lbt5qEOaYg=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_9_1" Type="string" Value=""/>
+				<Property Name="RTPC\GameParameterSimValue\{41425376-1FDE-4091-BA49-08C47646DC12}" Type="Real64" Value="2"/>
 				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value="sYs4rCRKSkC1waIw+wQv6A=="/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
 				<Property Name="SoundBankPaths" Type="string">

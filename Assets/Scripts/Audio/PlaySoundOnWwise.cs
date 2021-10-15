@@ -6,8 +6,10 @@ public class PlaySoundOnWwise : MonoBehaviour
 {
     [SerializeField] AK.Wwise.Event m_EventToPlay;
 
-    private void OnEnable()
+    private void Start()
     {
-        m_EventToPlay.Post(gameObject);
+       
+      m_EventToPlay.Post(gameObject);
+      
     }
 }

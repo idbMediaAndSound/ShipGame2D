@@ -50,12 +50,12 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1976062086">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3427827313" Language="SFX" Hash="3628438356">
+		<SoundBank Id="3427827313" Language="SFX" Hash="1642906110">
 			<ObjectPath>\SoundBanks\Default Work Unit\MusicSoundBank</ObjectPath>
 			<ShortName>MusicSoundBank</ShortName>
 			<Path>MusicSoundBank.bnk</Path>
@@ -69,6 +69,9 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="1763041431" Name="MusicSpeed" ObjectPath="\Game Parameters\Default Work Unit\MusicSpeed"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="3938467746" Language="SFX" Hash="1196267215">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenuSoundBank</ObjectPath>

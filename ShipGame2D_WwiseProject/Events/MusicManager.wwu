@@ -6,6 +6,16 @@
 				<Event Name="PlayMusic" ID="{E79E6F25-975C-4CE2-8B86-98AF6E4150B8}">
 					<ChildrenList>
 						<Action Name="" ID="{4322403E-FC2A-4D19-AB9A-C9CB129F81A3}" ShortID="443506433">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicPlaylist" ID="{1C2AB7DC-4321-4240-9640-C1E98ADA3D66}" WorkUnitID="{C44804DB-1595-48F1-A11A-124386939FC6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CBC6C3D2-8E5F-4122-8E18-E6AF0CDC3BF4}" ShortID="649048604">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="MusicPlaylist" ID="{1C2AB7DC-4321-4240-9640-C1E98ADA3D66}" WorkUnitID="{C44804DB-1595-48F1-A11A-124386939FC6}"/>
