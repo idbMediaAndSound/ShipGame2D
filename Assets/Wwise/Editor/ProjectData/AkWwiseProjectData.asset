@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: b18b38ac244a4a40b5c1a230fb042fe8
     GuidInternal: 
-    m_lastTime: -8585675892654775808
+    m_lastTime: -8585672555294775808
     List:
     - name: MainMenuSoundBank
       guid: 9b7f4cd45ce6c44bb9fb3455945dbf2e
@@ -135,8 +135,42 @@ MonoBehaviour:
     ParentPath: Events/MainCharacter
     guid: 946faebe1a1983439d675034e00964a5
     GuidInternal: 
-    m_lastTime: -8585675914844775808
+    m_lastTime: -8585672555294775808
     List:
+    - name: ActivateShield
+      guid: ad1c43f453917e47999a01b7a67f8028
+      id: 2443337181
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainCharacter
+        ObjectType: 12
+        guid: 946faebe1a1983439d675034e00964a5
+      - ElementName: ActivateShield
+        ObjectType: 3
+        guid: ad1c43f453917e47999a01b7a67f8028
+      Path: Events/MainCharacter/ActivateShield
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: DeactivateShield
+      guid: 7f5fb3f0696e694cb7508693388d57a4
+      id: 395057144
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainCharacter
+        ObjectType: 12
+        guid: 946faebe1a1983439d675034e00964a5
+      - ElementName: DeactivateShield
+        ObjectType: 3
+        guid: 7f5fb3f0696e694cb7508693388d57a4
+      Path: Events/MainCharacter/DeactivateShield
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Explossion
       guid: 3e42097f4c23704a8c827d4e3f77bcc7
       id: 1839873747
@@ -188,6 +222,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.8
       minDuration: 0.8
+    - name: Thruster
+      guid: 2ff4c0c0d914bd4c8ed7992ec379fecc
+      id: 1758897770
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainCharacter
+        ObjectType: 12
+        guid: 946faebe1a1983439d675034e00964a5
+      - ElementName: Thruster
+        ObjectType: 3
+        guid: 2ff4c0c0d914bd4c8ed7992ec379fecc
+      Path: Events/MainCharacter/Thruster
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: TripleShotFire
       guid: aae13bee8c3bca429c6eab3504d801a9
       id: 863752677
@@ -306,7 +357,7 @@ MonoBehaviour:
     m_lastTime: -8585678553714775808
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000005000000070000000b0000000c0000001000000011000000
+  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000b0000000c000000100000001100000012000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

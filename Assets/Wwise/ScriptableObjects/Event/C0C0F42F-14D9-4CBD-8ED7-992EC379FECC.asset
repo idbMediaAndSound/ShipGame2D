@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68517063bafc348c8bf518d36259018f, type: 3}
+  m_Name: C0C0F42F-14D9-4CBD-8ED7-992EC379FECC
+  m_EditorClassIdentifier: 
+  objectName: Thruster
+  id: 1758897770
+  guid: C0C0F42F-14D9-4CBD-8ED7-992EC379FECC

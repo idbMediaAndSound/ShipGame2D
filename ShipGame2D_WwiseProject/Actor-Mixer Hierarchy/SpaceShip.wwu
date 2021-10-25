@@ -4,6 +4,9 @@
 		<WorkUnit Name="SpaceShip" ID="{19F5993D-4CE8-431F-8C72-798156D53C31}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="Explossion" ID="{7A5F156C-E963-464D-AD3A-B7529AC8BE4A}" ShortID="617382170">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{497E6990-D814-447A-B99D-FB020C52C5FF}"/>
@@ -28,6 +31,7 @@
 				</Sound>
 				<Sound Name="Laser" ID="{48446939-B5C0-4A6F-92CB-4A9528ACFA56}" ShortID="146329131">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -65,6 +69,9 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="PowerUp" ID="{E9A07D75-747D-4584-B37D-2BC65B2D788C}" ShortID="394578747">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{497E6990-D814-447A-B99D-FB020C52C5FF}"/>
@@ -79,6 +86,13 @@
 							<AudioFile>power_up_sound.wav</AudioFile>
 							<MediaIDList>
 								<MediaID ID="841046023"/>
+							</MediaIDList>
+						</AudioFileSource>
+						<AudioFileSource Name="SpaceShip_Truster_02" ID="{FC82F9FC-532D-460C-A197-52397F583C59}">
+							<Language>SFX</Language>
+							<AudioFile>SpaceShip_Truster_02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="712235468"/>
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
@@ -231,6 +245,67 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</BlendContainer>
+				<Sound Name="Shield" ID="{A5C20D56-90BC-42A8-8FD2-D85D10A70FF4}" ShortID="481311660">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{497E6990-D814-447A-B99D-FB020C52C5FF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6901679F-363C-4901-8626-4279CDB19704}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ElectricFloor2" ID="{88BAAB4C-8150-41FC-94A7-DB3F9459C741}">
+							<PropertyList>
+								<Property Name="CrossfadeDuration" Type="Real64" Value="465.389"/>
+								<Property Name="LoopBegin" Type="Real64" Value="0.553637596899225"/>
+								<Property Name="LoopEnd" Type="Real64" Value="4.38955523255815"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="4.92342005813954"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>ElectricFloor2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1055470121"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="ElectricFloor2" ID="{88BAAB4C-8150-41FC-94A7-DB3F9459C741}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Thruster" ID="{6BEB7508-E5B3-41A7-A5B8-689C836B8722}" ShortID="423787701">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{497E6990-D814-447A-B99D-FB020C52C5FF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6901679F-363C-4901-8626-4279CDB19704}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SpaceShip_Truster_02" ID="{BEDC0F60-6077-488C-BC9C-5B178587CAD8}">
+							<Language>SFX</Language>
+							<AudioFile>SpaceShip_Truster_02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="949643214"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="SpaceShip_Truster_02" ID="{BEDC0F60-6077-488C-BC9C-5B178587CAD8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

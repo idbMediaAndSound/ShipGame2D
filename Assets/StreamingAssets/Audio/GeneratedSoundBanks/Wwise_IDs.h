@@ -13,10 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ACTIVATESHIELD = 2443337181U;
+        static const AkUniqueID DEACTIVATESHIELD = 395057144U;
+        static const AkUniqueID ENEMYLASER = 1070574444U;
         static const AkUniqueID EXPLOSSION = 1839873747U;
         static const AkUniqueID LASERFIRE = 315496058U;
         static const AkUniqueID PLAYMUSIC = 417627684U;
         static const AkUniqueID POWERUP = 3950429679U;
+        static const AkUniqueID THRUSTER = 1758897770U;
         static const AkUniqueID TRIPLESHOTFIRE = 863752677U;
     } // namespace EVENTS
 

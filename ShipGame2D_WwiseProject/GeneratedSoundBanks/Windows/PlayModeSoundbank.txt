@@ -1,11 +1,18 @@
 Event	ID	Name			Wwise Object Path	Notes
 	315496058	LaserFire			\MainCharacter\LaserFire	
+	395057144	DeactivateShield			\MainCharacter\DeactivateShield	
 	863752677	TripleShotFire			\MainCharacter\TripleShotFire	
+	1070574444	EnemyLaser			\MainCharacter\EnemyLaser	
+	1758897770	Thruster			\MainCharacter\Thruster	
 	1839873747	Explossion			\MainCharacter\Explossion	
+	2443337181	ActivateShield			\MainCharacter\ActivateShield	
 	3950429679	Powerup			\MainCharacter\Powerup	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	377672464	Explossion	Y:\Documents\GitHub\ShipGame2D\ShipGame2D_WwiseProject\.cache\Windows\SFX\explosion_sound_569C59C1.wem		\Actor-Mixer Hierarchy\SpaceShip\Explossion		37377
 	841046023	PowerUp	Y:\Documents\GitHub\ShipGame2D\ShipGame2D_WwiseProject\.cache\Windows\SFX\power_up_sound_569C59C1.wem		\Actor-Mixer Hierarchy\SpaceShip\PowerUp		13189
-	985237385	Laser_03	Y:\Documents\GitHub\ShipGame2D\ShipGame2D_WwiseProject\.cache\Windows\SFX\laser_shot_569C59C1.wem		\Actor-Mixer Hierarchy\SpaceShip\TripleShot\Laser_03		14238
+	949643214	Thruster	Y:\Documents\GitHub\ShipGame2D\ShipGame2D_WwiseProject\.cache\Windows\SFX\SpaceShip_Truster_02_E84716CF.wem		\Actor-Mixer Hierarchy\SpaceShip\Thruster		11909
+	985237385	Laser	Y:\Documents\GitHub\ShipGame2D\ShipGame2D_WwiseProject\.cache\Windows\SFX\laser_shot_569C59C1.wem		\Actor-Mixer Hierarchy\SpaceShip\Laser		14238
+	1055470121	Shield	Y:\Documents\GitHub\ShipGame2D\ShipGame2D_WwiseProject\.cache\Windows\SFX\ElectricFloor2_A67D7438.wem		\Actor-Mixer Hierarchy\SpaceShip\Shield		60503
+	1069746900	EnemyLAser	Y:\Documents\GitHub\ShipGame2D\ShipGame2D_WwiseProject\.cache\Windows\SFX\laser_shot_69A90A0D.wem		\Actor-Mixer Hierarchy\SpaceShip\EnemyLAser		13645
 

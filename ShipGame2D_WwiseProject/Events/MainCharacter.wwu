@@ -47,6 +47,42 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ActivateShield" ID="{F4431CAD-9153-477E-999A-01B7A67F8028}">
+					<ChildrenList>
+						<Action Name="" ID="{CD940FC1-FBEF-4382-B1E5-5D5BC6E9A933}" ShortID="802141544">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shield" ID="{A5C20D56-90BC-42A8-8FD2-D85D10A70FF4}" WorkUnitID="{19F5993D-4CE8-431F-8C72-798156D53C31}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DeactivateShield" ID="{F0B35F7F-6E69-4C69-B750-8693388D57A4}">
+					<ChildrenList>
+						<Action Name="" ID="{4D83D62F-834A-4070-9048-006A9DAF482C}" ShortID="341862003">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shield" ID="{A5C20D56-90BC-42A8-8FD2-D85D10A70FF4}" WorkUnitID="{19F5993D-4CE8-431F-8C72-798156D53C31}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Thruster" ID="{C0C0F42F-14D9-4CBD-8ED7-992EC379FECC}">
+					<ChildrenList>
+						<Action Name="" ID="{41E486C4-881B-4A5D-8BB1-A771775F5C61}" ShortID="415335028">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thruster" ID="{6BEB7508-E5B3-41A7-A5B8-689C836B8722}" WorkUnitID="{19F5993D-4CE8-431F-8C72-798156D53C31}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

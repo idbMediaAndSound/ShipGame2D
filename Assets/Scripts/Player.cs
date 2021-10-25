@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
@@ -51,10 +52,14 @@ public class Player : MonoBehaviour
     [SerializeField] DisplayLives m_DisplayLives;
     [SerializeField] private GameObject[] m_EnginesPrefab;
     [SerializeField] private GameObject m_Thruster;
-
+    [Header("WwiseEvents")]
+    [SerializeField] private AK.Wwise.Event m_ShieldSfx;
+    [SerializeField] private AK.Wwise.Event m_PowerupSfx;
+    [SerializeField] private AK.Wwise.Event m_ExplossionSfx;
     private bool m_IsTripleShotActive = false;
     private bool m_IsSpeedActive = false;
     private bool m_IsShieldActive = false;
+
 
     #endregion Variables
 
@@ -78,11 +83,21 @@ public class Player : MonoBehaviour
     {
         m_time = Time.time;
         CalculateMovement();
+
+#if !PLATFORM_ANDROID
+
         if (Input.GetButton(m_Fire1) && Time.time > m_CanFire)
         {
             ShootLaser();
         }
+#else
+        if(CrossPlatformInputManager.GetButton(m_Fire1) && Time.time > m_CanFire)
+        {
+            ShootLaser();
+        }
+#endif
     }
+
 
 
     #region Methods
@@ -94,8 +109,15 @@ public class Player : MonoBehaviour
 
     private void CalculateMovement()
     {
+
+#if !PLATFORM_ANDROID
         float x_value = Input.GetAxis(m_HorizontalAxis);
         float y_value = Input.GetAxis(m_VerticalAxis);
+#else
+        float x_value = CrossPlatformInputManager.GetAxis(m_HorizontalAxis);
+        float y_value = CrossPlatformInputManager.GetAxis(m_VerticalAxis);
+
+#endif
         Vector3 direction = new Vector3(x_value, y_value, 0);
 
         transform.Translate(direction * (m_Speed * Time.deltaTime));
@@ -154,6 +176,8 @@ public class Player : MonoBehaviour
         {
             m_IsShieldActive = false;
             m_ShieldPrefab.SetActive(false);
+            //AkSoundEngine.PostEvent("DeactivateShield", gameObject);
+            m_ShieldSfx.Stop(gameObject);
         }
 
         m_UIManager.UpdateLives();
@@ -199,6 +223,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D (Collider2D other)
+    {
+        if(other.gameObject.CompareTag("EnemyLaser"))
+        {
+            Debug.Log("Quack");
+            m_ExplossionSfx.Post(gameObject);
+            Damage();
+        }
+    }
+
+
     #endregion Methods
 
     #region Powerups
@@ -206,13 +241,21 @@ public class Player : MonoBehaviour
     public void ActivateTripleShot()
     {
         if (!m_IsTripleShotActive)
+        {
             StartCoroutine(PowerUpsCoolDown(CollectablePowerUps.TripleShot));
+            m_PowerupSfx.Post(gameObject);
+        }
     }
+            
 
     public void ActivateSpeed()
     {
         if (!m_IsSpeedActive)
+        {
             StartCoroutine(PowerUpsCoolDown(CollectablePowerUps.Speed));
+            m_PowerupSfx.Post(gameObject);
+        }
+            
     }
 
     public void ActivateShield()
@@ -221,9 +264,9 @@ public class Player : MonoBehaviour
             StartCoroutine(PowerUpsCoolDown(CollectablePowerUps.Shield));
     }
 
-    #endregion Powerups
+#endregion Powerups
 
-    #region Coroutines
+#region Coroutines
 
     private IEnumerator PowerUpsCoolDown(CollectablePowerUps collectablePowerUps)
     {
@@ -246,8 +289,12 @@ public class Player : MonoBehaviour
             case CollectablePowerUps.Shield:
                 m_IsShieldActive = true;
                 m_ShieldPrefab.SetActive(true);
+                m_ShieldSfx.Post(gameObject);
+                //AkSoundEngine.PostEvent("ActivateShield", gameObject);
                 yield return new WaitForSeconds(10.0f);
                 m_ShieldPrefab.SetActive(false);
+                m_ShieldSfx.Stop(gameObject);
+                //AkSoundEngine.PostEvent("DeactivateShield", gameObject);
                 m_IsShieldActive = false;
                 break;
         }
@@ -275,5 +322,5 @@ public class Player : MonoBehaviour
         }
     }
 
-    #endregion coroutines
+#endregion coroutines
 }

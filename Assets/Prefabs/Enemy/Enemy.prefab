@@ -47,13 +47,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec06595fd4406554cb6903ca9d495be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Speed: 4
+  m_Speed: 2
   m_YLimit: 8.41
   m_Player: {fileID: 0}
   m_TypeOfEnemy: 0
   m_Anim: {fileID: 4463627175412944937}
   m_DestroyEnemy: {fileID: 7400000, guid: fb9191bf607dea841a67d12799da6275, type: 2}
   m_Collider2D: {fileID: 5483004763364777311}
+  m_Explossion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 69b071318da724b60ac6274145a8bb7f, type: 2}
+  m_LaserPrefab: {fileID: 7569568837416634697, guid: 0dd2c010d5b1b4371904ec600817e00d, type: 3}
+  m_Offset: {x: 0, y: 0, z: 0}
+  m_LaserShotSfx:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 612049f197cfd4f309587967da4cfbb9, type: 2}
 --- !u!212 &9014832091664645632
 SpriteRenderer:
   m_ObjectHideFlags: 0

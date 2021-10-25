@@ -13,6 +13,7 @@
 				<SoundBank Name="PlayModeSoundbank" ID="{6A9F90F7-6B93-45B8-B380-F7EAAE32AB5A}">
 					<ObjectInclusionList>
 						<ObjectRef Name="MainCharacter" ID="{BEAE6F94-191A-4383-9D67-5034E00964A5}" WorkUnitID="{BEAE6F94-191A-4383-9D67-5034E00964A5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Thruster" ID="{C0C0F42F-14D9-4CBD-8ED7-992EC379FECC}" WorkUnitID="{BEAE6F94-191A-4383-9D67-5034E00964A5}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

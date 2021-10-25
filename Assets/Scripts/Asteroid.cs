@@ -56,6 +56,7 @@ void Start()
     {
         m_AsteroidSprite.enabled = false;
         GameObject newAsteroid = Instantiate(m_ExplosionPrefab, transform.position, Quaternion.identity);
+        AkSoundEngine.PostEvent("Explossion", gameObject);
         newAsteroid.transform.parent = m_ExplosionContainer.transform;
         m_Collider2D.enabled = false;
         m_SpawnManager.StartSpawning();

@@ -3,12 +3,15 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{B3314185-9542-41B1-B758-710130DEDD6A}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\GitHub\ShipGame2D\Assets\Audio\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Documents\Spring_2020\Videogames\MyFirstGameJam2021_Jan\Audio Assets\Misc SFx\ElectricFloor\"/>
 				<Property Name="Event Action List\{7F09423E-234C-4A70-8C82-7D4E3F77BCC7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A71B5BAC-01D9-46D4-A367-7E4524ED52AE}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{C0C0F42F-14D9-4CBD-8ED7-992EC379FECC}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E1C1A4E7-5468-468A-9A9A-F84A25A726BD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E79E6F25-975C-4CE2-8B86-98AF6E4150B8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{EE3BE1AA-3B8C-42CA-9C6E-AB3504D801A9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{F0B35F7F-6E69-4C69-B750-8693388D57A4}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{F4431CAD-9153-477E-999A-01B7A67F8028}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -70,7 +73,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_22_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="PZn1GehMH0OMcnmBVtU8MeR+AHR/W31LiqI3P8IdQDg="/>
+				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="PZn1GehMH0OMcnmBVtU8MQ=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value="lG+uvhoZg0OdZ1A04AlkpZkVP3HdKvJKkwyOoXEhVwI="/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>
@@ -110,7 +113,7 @@
 						<Value Platform="Windows"></Value>
 					</ValueList>
 				</Property>
-				<Property Name="SoundEngine\BusMapping\{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" Type="string" Value="{089A3945-8F99-4876-A35F-842454BA69D4}3117524264"/>
+				<Property Name="SoundEngine\BusMapping\{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" Type="string" Value="{089A3945-8F99-4876-A35F-842454BA69D4}684180944"/>
 			</PropertyList>
 			<PluginInnerObjectList>
 				<List Name="BatchRenameSettings">

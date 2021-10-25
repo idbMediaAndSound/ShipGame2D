@@ -11,11 +11,28 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="184776329" Language="SFX" Hash="972844599">
+		<SoundBank Id="184776329" Language="SFX" Hash="42785161">
 			<ObjectPath>\SoundBanks\Default Work Unit\PlayModeSoundbank</ObjectPath>
 			<ShortName>PlayModeSoundbank</ShortName>
 			<Path>PlayModeSoundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2443337181" Name="ActivateShield" ObjectPath="\Events\MainCharacter\ActivateShield" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1055470121" Language="SFX">
+							<ShortName>ElectricFloor2.wav</ShortName>
+							<Path>SFX/ElectricFloor2_A67D7438.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="395057144" Name="DeactivateShield" ObjectPath="\Events\MainCharacter\DeactivateShield" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1070574444" Name="EnemyLaser" ObjectPath="\Events\MainCharacter\EnemyLaser" DurationType="OneShot" DurationMin="0.777599" DurationMax="0.924726">
+					<IncludedMemoryFiles>
+						<File Id="1069746900" Language="SFX">
+							<ShortName>laser_shot.wav</ShortName>
+							<Path>SFX/laser_shot_69A90A0D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1839873747" Name="Explossion" ObjectPath="\Events\MainCharacter\Explossion" DurationType="OneShot" DurationMin="3.018396" DurationMax="3.018396">
 					<IncludedMemoryFiles>
 						<File Id="377672464" Language="SFX">
@@ -37,6 +54,14 @@
 						<File Id="841046023" Language="SFX">
 							<ShortName>power_up_sound.wav</ShortName>
 							<Path>SFX/power_up_sound_569C59C1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1758897770" Name="Thruster" ObjectPath="\Events\MainCharacter\Thruster" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="949643214" Language="SFX">
+							<ShortName>SpaceShip_Truster_02.wav</ShortName>
+							<Path>SFX/SpaceShip_Truster_02_E84716CF.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -9,22 +9,37 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Player m_Player;
     [SerializeField] private TypeOfEnemy m_TypeOfEnemy = new TypeOfEnemy();
     [SerializeField] private Animator m_Anim;
-    protected float m_RandomXPos;
     [SerializeField] private AnimationClip m_DestroyEnemy;
     [SerializeField] private Collider2D m_Collider2D;
+    [SerializeField] private GameObject m_LaserPrefab;
+    [SerializeField] private Vector3 m_Offset;
+    [SerializeField] AK.Wwise.Event m_LaserShotSfx;
+    [SerializeField] AK.Wwise.Event m_Explossion;
+    protected float m_RandomXPos;
+    private float m_FireRate = 3f;
+    private float m_CanFire = 1f;
+    
     void Start()
     {
         m_Player = FindObjectOfType<Player>();
+
         if (m_Collider2D == null)
         {
             m_Collider2D = GetComponent<Collider2D>();
         }
+        StartCoroutine(EnemyShot());
+
     }
 
     void Update()
     {
-        transform.Translate(Vector3.down * (m_Speed * Time.deltaTime));
+        CalculateMovement();
         Respawn();
+    }
+
+    void CalculateMovement()
+    {
+        transform.Translate(Vector3.down * (m_Speed * Time.deltaTime));
     }
 
     public virtual void Respawn()
@@ -36,6 +51,7 @@ public class Enemy : MonoBehaviour
             transform.position = new Vector3(m_RandomXPos, m_YLimit, transform.position.z);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         
@@ -50,6 +66,7 @@ public class Enemy : MonoBehaviour
                 return;
             }
             DestroyEnemy(other);
+            m_Explossion.Post(gameObject);
         }
         
         if (other.gameObject.CompareTag("Player"))
@@ -59,6 +76,11 @@ public class Enemy : MonoBehaviour
                 m_Player.Damage();
             }
             DestroyEnemy(other);
+            m_Explossion.Post(gameObject);
+        }
+        else
+        {
+            return;
         }
     }
 
@@ -71,5 +93,17 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
         }
         Destroy(this.gameObject, m_DestroyEnemy.length); 
+    }
+
+
+    private IEnumerator EnemyShot()
+    {
+        while (true)
+        { 
+            Instantiate(m_LaserPrefab, transform.position, Quaternion.identity);
+            m_LaserShotSfx.Post(gameObject);
+            yield return new WaitForSeconds(Random.Range(1f, 2.5f));
+        }
+        
     }
 }
